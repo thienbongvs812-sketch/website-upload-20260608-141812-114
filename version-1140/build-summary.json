@@ -1,0 +1,18 @@
+{
+  "movie_count": 2000,
+  "detail_pages": 2000,
+  "category_counts": {
+    "国产热播": 201,
+    "悬疑犯罪": 200,
+    "动作冒险": 200,
+    "爱情剧情": 201,
+    "奇幻科幻": 200,
+    "恐怖惊悚": 199,
+    "历史传记": 199,
+    "喜剧家庭": 200,
+    "动画综艺": 200,
+    "海外佳作": 200
+  },
+  "video_sources_found_in_original_js": 150,
+  "unique_video_sources_found_in_original_js": 20
+}

@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>搜索影片 - 热播国产影视</title>
+    <meta name="description" content="搜索热播国产影视、高清电影片库、电视剧和今日推荐影视内容。">
+    <meta name="keywords" content="搜索,国产影视,电影,电视剧,热播国产影视在线看 _ 高清免费电影片库大全_今日推荐影视,国产,视频,免费,在线观看,高清,影视大全">
+    <meta name="renderer" content="webkit">
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    
+    <script src="./assets/js/site.js" defer></script>
+    <script src="./assets/js/movie-data.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="brand" href="./index.html" aria-label="热播国产影视首页">
+            <span class="brand-icon">▶</span>
+            <span class="brand-name">热播国产影视</span>
+        </a>
+        <nav class="desktop-nav" aria-label="主导航">
+            <a href="./index.html">首页</a>
+            <a href="./categories.html">分类浏览</a>
+            <a href="./ranking.html">排行榜</a>
+            <a href="./search.html">搜索筛选</a>
+            <a href="./category-guochan-rebo.html">国产热播</a>
+<a href="./category-xuanyi-fanzui.html">悬疑犯罪</a>
+<a href="./category-dongzuo-maoxian.html">动作冒险</a>
+<a href="./category-aiqing-juqing.html">爱情剧情</a>
+<a href="./category-qihuan-kehuan.html">奇幻科幻</a>
+<a href="./category-kongbu-jingsong.html">恐怖惊悚</a>
+        </nav>
+        <form class="header-search" action="./search.html" method="get" data-site-search>
+            <input type="search" name="q" placeholder="搜索电影电视剧..." aria-label="搜索电影电视剧">
+            <button type="submit">搜索</button>
+        </form>
+        <button class="mobile-menu-button" type="button" data-menu-toggle aria-label="打开导航">☰</button>
+    </div>
+    <div class="mobile-nav" data-mobile-nav>
+        <form action="./search.html" method="get" data-site-search>
+            <input type="search" name="q" placeholder="搜索电影电视剧..." aria-label="搜索电影电视剧">
+            <button type="submit">搜索</button>
+        </form>
+        <a href="./index.html">首页</a>
+        <a href="./categories.html">分类浏览</a>
+        <a href="./ranking.html">排行榜</a>
+        <a href="./search.html">搜索筛选</a>
+        <a href="./category-guochan-rebo.html">国产热播</a>
+<a href="./category-xuanyi-fanzui.html">悬疑犯罪</a>
+<a href="./category-dongzuo-maoxian.html">动作冒险</a>
+<a href="./category-aiqing-juqing.html">爱情剧情</a>
+<a href="./category-qihuan-kehuan.html">奇幻科幻</a>
+<a href="./category-kongbu-jingsong.html">恐怖惊悚</a>
+    </div>
+</header>
+<main>
+    <section class="page-hero">
+        <div class="search-hero-inner">
+            <span class="eyebrow">Search</span>
+            <h1>搜索影片</h1>
+            <p>输入片名、地区、类型、标签或剧情关键词，快速检索完整静态片库。</p>
+            <form class="hero-search" action="search.html" method="get" data-site-search>
+                <input type="search" name="q" data-search-input placeholder="搜索电影、剧集、标签、地区...">
+                <button type="submit">开始搜索</button>
+            </form>
+        </div>
+    </section>
+    <section class="section">
+        <form class="filter-panel search-filter-panel" data-search-filter>
+            <label>
+                <span>关键词</span>
+                <input type="search" data-search-keyword placeholder="输入关键词">
+            </label>
+            <label>
+                <span>分类</span>
+                <select data-search-category>
+                    <option value="">全部分类</option>
+                    <option value="国产热播">国产热播</option><option value="悬疑犯罪">悬疑犯罪</option><option value="动作冒险">动作冒险</option><option value="爱情剧情">爱情剧情</option><option value="奇幻科幻">奇幻科幻</option><option value="恐怖惊悚">恐怖惊悚</option><option value="历史传记">历史传记</option><option value="喜剧家庭">喜剧家庭</option><option value="动画综艺">动画综艺</option><option value="海外佳作">海外佳作</option>
+                </select>
+            </label>
+            <label>
+                <span>类型</span>
+                <select data-search-type>
+                    <option value="">全部类型</option>
+                    <option value="电影">电影</option><option value="剧集">剧集</option><option value="电视剧">电视剧</option><option value="动画">动画</option><option value="综艺">综艺</option><option value="纪录片">纪录片</option>
+                </select>
+            </label>
+            <label>
+                <span>年份</span>
+                <input type="search" data-search-year placeholder="例如 2025">
+            </label>
+        </form>
+        <p class="filter-summary" data-search-summary>输入关键词或筛选条件后显示结果</p>
+        <div class="movie-grid" data-search-results></div>
+        <div class="search-fallback" data-search-fallback>
+            <h2>热门推荐</h2>
+            <div class="movie-grid">
+                <a class="movie-card movie-card--compact" href="./detail/1552.html" data-filter-card data-title="名模大间谍2" data-year="2029" data-type="电影" data-region="美国" data-category="喜剧家庭">
+    <figure class="movie-poster">
+        
+        <img src="./52.jpg" alt="名模大间谍2" loading="lazy" data-cover-fallback="名">
+    </figure>
+    <div class="movie-card-body">
+        <h3>名模大间谍2</h3>
+        <p class="movie-one-line">顶级超模的真实身份是CIA特工，她这次的任务是混入一场“人工智能时装周”，阻止AI盗取各国政要的步态识别数据。</p>
+        <div class="movie-meta">
+            <span>美国</span>
+            <span>电影</span>
+            <span>2029</span>
+        </div>
+        <div class="tag-row"><span>美国</span><span>电影</span><span>动作</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/1088.html" data-filter-card data-title="凡夫俗子" data-year="2029" data-type="剧集" data-region="美国" data-category="喜剧家庭">
+    <figure class="movie-poster">
+        
+        <img src="./38.jpg" alt="凡夫俗子" loading="lazy" data-cover-fallback="凡">
+    </figure>
+    <div class="movie-card-body">
+        <h3>凡夫俗子</h3>
+        <p class="movie-one-line">一个普通美国家庭在儿子校园枪击案中失去了女儿，剩下的人要如何面对“普通的”余生？</p>
+        <div class="movie-meta">
+            <span>美国</span>
+            <span>剧集</span>
+            <span>2029</span>
+        </div>
+        <div class="tag-row"><span>美国</span><span>剧集</span><span>剧情</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/0013.html" data-filter-card data-title="琼宫春怨" data-year="2029" data-type="网络剧" data-region="中国大陆" data-category="悬疑犯罪">
+    <figure class="movie-poster">
+        
+        <img src="./13.jpg" alt="琼宫春怨" loading="lazy" data-cover-fallback="琼">
+    </figure>
+    <div class="movie-card-body">
+        <h3>琼宫春怨</h3>
+        <p class="movie-one-line">宫女被选中成为冷宫废后的替身，却发现废后早就逃出了琼宫，而真正想杀她的是皇帝。</p>
+        <div class="movie-meta">
+            <span>中国大陆</span>
+            <span>网络剧</span>
+            <span>2029</span>
+        </div>
+        <div class="tag-row"><span>中国大陆</span><span>网络剧</span><span>古装</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/1181.html" data-filter-card data-title="北之萤" data-year="2028" data-type="电影" data-region="日本" data-category="爱情剧情">
+    <figure class="movie-poster">
+        
+        <img src="./131.jpg" alt="北之萤" loading="lazy" data-cover-fallback="北">
+    </figure>
+    <div class="movie-card-body">
+        <h3>北之萤</h3>
+        <p class="movie-one-line">在北海道的一片神秘沼泽边，一位现代女作家通过梦境连接上了百年前一位阿伊努少女的悲伤爱恋。</p>
+        <div class="movie-meta">
+            <span>日本</span>
+            <span>电影</span>
+            <span>2028</span>
+        </div>
+        <div class="tag-row"><span>日本</span><span>电影</span><span>爱情</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/0065.html" data-filter-card data-title="冰原蛮象大反扑" data-year="2028" data-type="电影" data-region="美国" data-category="奇幻科幻">
+    <figure class="movie-poster">
+        
+        <img src="./65.jpg" alt="冰原蛮象大反扑" loading="lazy" data-cover-fallback="冰">
+    </figure>
+    <div class="movie-card-body">
+        <h3>冰原蛮象大反扑</h3>
+        <p class="movie-one-line">气候变暖融化了西伯利亚冰原，释放出上万头被冰封两万年的克隆蛮象，而它们第一站就是莫斯科。</p>
+        <div class="movie-meta">
+            <span>美国</span>
+            <span>电影</span>
+            <span>2028</span>
+        </div>
+        <div class="tag-row"><span>美国</span><span>电影</span><span>动作</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/1630.html" data-filter-card data-title="长笛与箭" data-year="2028" data-type="电影" data-region="日本" data-category="动作冒险">
+    <figure class="movie-poster">
+        
+        <img src="./130.jpg" alt="长笛与箭" loading="lazy" data-cover-fallback="长">
+    </figure>
+    <div class="movie-card-body">
+        <h3>长笛与箭</h3>
+        <p class="movie-one-line">为了平息山神的怒火，一个不会吹笛子的少年和一个厌恶弓箭的猎人之女，必须合作演奏出一首能杀死怪兽的乐曲。</p>
+        <div class="movie-meta">
+            <span>日本</span>
+            <span>电影</span>
+            <span>2028</span>
+        </div>
+        <div class="tag-row"><span>日本</span><span>电影</span><span>动画</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/1477.html" data-filter-card data-title="红楼梦第六部" data-year="2028" data-type="电影" data-region="中国大陆" data-category="国产热播">
+    <figure class="movie-poster">
+        
+        <img src="./127.jpg" alt="红楼梦第六部" loading="lazy" data-cover-fallback="红">
+    </figure>
+    <div class="movie-card-body">
+        <h3>红楼梦第六部</h3>
+        <p class="movie-one-line">大观园最后的幻梦破碎，黛玉焚稿、宝玉失玉、贾府抄家，所有宿命在这一部集中引爆。</p>
+        <div class="movie-meta">
+            <span>中国大陆</span>
+            <span>电影</span>
+            <span>2028</span>
+        </div>
+        <div class="tag-row"><span>中国大陆</span><span>电影</span><span>剧情</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/0003.html" data-filter-card data-title="金银死" data-year="2028" data-type="电影" data-region="中国香港" data-category="国产热播">
+    <figure class="movie-poster">
+        
+        <img src="./3.jpg" alt="金银死" loading="lazy" data-cover-fallback="金">
+    </figure>
+    <div class="movie-card-body">
+        <h3>金银死</h3>
+        <p class="movie-one-line">两拨笨贼在同一家金店火并，却发现抢到的金条全是巧克力，真正的黄金藏在殡仪馆。</p>
+        <div class="movie-meta">
+            <span>中国香港</span>
+            <span>电影</span>
+            <span>2028</span>
+        </div>
+        <div class="tag-row"><span>中国香港</span><span>电影</span><span>犯罪</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/0014.html" data-filter-card data-title="第二街的奇迹" data-year="2027" data-type="电影" data-region="中国香港" data-category="国产热播">
+    <figure class="movie-poster">
+        
+        <img src="./14.jpg" alt="第二街的奇迹" loading="lazy" data-cover-fallback="第">
+    </figure>
+    <div class="movie-card-body">
+        <h3>第二街的奇迹</h3>
+        <p class="movie-one-line">面临拆迁的老街上，一个自称土地公的神秘老人每晚出现，只要在他面前说真心话，就能实现一个小奇迹。</p>
+        <div class="movie-meta">
+            <span>中国香港</span>
+            <span>电影</span>
+            <span>2027</span>
+        </div>
+        <div class="tag-row"><span>中国香港</span><span>电影</span><span>剧情</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/1148.html" data-filter-card data-title="最大的漫游者" data-year="2027" data-type="电影" data-region="德国" data-category="喜剧家庭">
+    <figure class="movie-poster">
+        
+        <img src="./98.jpg" alt="最大的漫游者" loading="lazy" data-cover-fallback="最">
+    </figure>
+    <div class="movie-card-body">
+        <h3>最大的漫游者</h3>
+        <p class="movie-one-line">人类第一艘星际飞船上唯一的乘客，是已去世宇航员的意识副本，他在途中爱上了一段自己的记忆。</p>
+        <div class="movie-meta">
+            <span>德国</span>
+            <span>电影</span>
+            <span>2027</span>
+        </div>
+        <div class="tag-row"><span>德国</span><span>电影</span><span>哲学科幻</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/1733.html" data-filter-card data-title="封神榜：托塔天王" data-year="2027" data-type="电影" data-region="大陆" data-category="历史传记">
+    <figure class="movie-poster">
+        
+        <img src="./83.jpg" alt="封神榜：托塔天王" loading="lazy" data-cover-fallback="封">
+    </figure>
+    <div class="movie-card-body">
+        <h3>封神榜：托塔天王</h3>
+        <p class="movie-one-line">聚焦李靖从凡人陈塘关总兵到“托塔天王”的心路历程，还原一代严父的封神之路。</p>
+        <div class="movie-meta">
+            <span>大陆</span>
+            <span>电影</span>
+            <span>2027</span>
+        </div>
+        <div class="tag-row"><span>大陆</span><span>电影</span><span>奇幻</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/1768.html" data-filter-card data-title="兵权" data-year="2027" data-type="剧集" data-region="中国大陆" data-category="历史传记">
+    <figure class="movie-poster">
+        
+        <img src="./118.jpg" alt="兵权" loading="lazy" data-cover-fallback="兵">
+    </figure>
+    <div class="movie-card-body">
+        <h3>兵权</h3>
+        <p class="movie-one-line">后周世宗柴荣驾崩前，将兵权一分为三交给三位将军，却不知其中一人正是赵匡胤的暗棋。</p>
+        <div class="movie-meta">
+            <span>中国大陆</span>
+            <span>剧集</span>
+            <span>2027</span>
+        </div>
+        <div class="tag-row"><span>中国大陆</span><span>剧集</span><span>历史</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/0908.html" data-filter-card data-title="西科克斯七人组的归来" data-year="2027" data-type="电影" data-region="德国" data-category="历史传记">
+    <figure class="movie-poster">
+        
+        <img src="./8.jpg" alt="西科克斯七人组的归来" loading="lazy" data-cover-fallback="西">
+    </figure>
+    <div class="movie-card-body">
+        <h3>西科克斯七人组的归来</h3>
+        <p class="movie-one-line">三十年前，东德一支传奇朋克乐队在演出前集体消失；三十年后，仅剩的三位成员收到了一张神秘演出邀请函。</p>
+        <div class="movie-meta">
+            <span>德国</span>
+            <span>电影</span>
+            <span>2027</span>
+        </div>
+        <div class="tag-row"><span>德国</span><span>电影</span><span>剧情</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/1340.html" data-filter-card data-title="来自火星的蜜拉" data-year="2027" data-type="电影" data-region="法国 / 比利时" data-category="奇幻科幻">
+    <figure class="movie-poster">
+        
+        <img src="./140.jpg" alt="来自火星的蜜拉" loading="lazy" data-cover-fallback="来">
+    </figure>
+    <div class="movie-card-body">
+        <h3>来自火星的蜜拉</h3>
+        <p class="movie-one-line">被诊断为孤独症的小女孩说她是火星人，等飞船修好就要离开地球，除非有人能证明地球值得留下。</p>
+        <div class="movie-meta">
+            <span>法国 / 比利时</span>
+            <span>电影</span>
+            <span>2027</span>
+        </div>
+        <div class="tag-row"><span>法国 / 比利时</span><span>电影</span><span>奇幻</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/1783.html" data-filter-card data-title="火之壁" data-year="2027" data-type="电影" data-region="日本" data-category="喜剧家庭">
+    <figure class="movie-poster">
+        
+        <img src="./133.jpg" alt="火之壁" loading="lazy" data-cover-fallback="火">
+    </figure>
+    <div class="movie-card-body">
+        <h3>火之壁</h3>
+        <p class="movie-one-line">一栋高层公寓发生火灾，顶层住户为了自救封死了逃生门，将楼下邻居困在火海中。</p>
+        <div class="movie-meta">
+            <span>日本</span>
+            <span>电影</span>
+            <span>2027</span>
+        </div>
+        <div class="tag-row"><span>日本</span><span>电影</span><span>灾难</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/1406.html" data-filter-card data-title="坦诚谈爱情" data-year="2027" data-type="网络剧" data-region="中国大陆" data-category="喜剧家庭">
+    <figure class="movie-poster">
+        
+        <img src="./56.jpg" alt="坦诚谈爱情" loading="lazy" data-cover-fallback="坦">
+    </figure>
+    <div class="movie-card-body">
+        <h3>坦诚谈爱情</h3>
+        <p class="movie-one-line">一家深夜心理诊疗室，陌生人之间互相揭开伤疤，进行一场关于“爱无能”的解剖实验。</p>
+        <div class="movie-meta">
+            <span>中国大陆</span>
+            <span>网络剧</span>
+            <span>2027</span>
+        </div>
+        <div class="tag-row"><span>中国大陆</span><span>网络剧</span><span>爱情</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/0086.html" data-filter-card data-title="直捣火星" data-year="2027" data-type="电影" data-region="美国" data-category="奇幻科幻">
+    <figure class="movie-poster">
+        
+        <img src="./86.jpg" alt="直捣火星" loading="lazy" data-cover-fallback="直">
+    </figure>
+    <div class="movie-card-body">
+        <h3>直捣火星</h3>
+        <p class="movie-one-line">火星殖民基地突然失联，一支由退役老兵和混混组成的杂牌军被送上火星，任务是活着带回可能已经叛变的指挥官。</p>
+        <div class="movie-meta">
+            <span>美国</span>
+            <span>电影</span>
+            <span>2027</span>
+        </div>
+        <div class="tag-row"><span>美国</span><span>电影</span><span>动作</span></div>
+    </div>
+</a><a class="movie-card movie-card--compact" href="./detail/1449.html" data-filter-card data-title="鬼追人5" data-year="2027" data-type="电影" data-region="美国" data-category="海外佳作">
+    <figure class="movie-poster">
+        
+        <img src="./99.jpg" alt="鬼追人5" loading="lazy" data-cover-fallback="鬼">
+    </figure>
+    <div class="movie-card-body">
+        <h3>鬼追人5</h3>
+        <p class="movie-one-line">那个能从镜子里爬出的杀人魔再次归来，这次他不再是猎人，而是被一位曾被他杀死的母亲追猎的猎物。</p>
+        <div class="movie-meta">
+            <span>美国</span>
+            <span>电影</span>
+            <span>2027</span>
+        </div>
+        <div class="tag-row"><span>美国</span><span>电影</span><span>恐怖</span></div>
+    </div>
+</a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="footer-grid">
+        <section>
+            <div class="footer-brand"><span class="brand-icon">▶</span><span>热播国产影视</span></div>
+            <p>提供热播国产影视在线观看，并拥有高清免费电影片库大全。资源更新快、画质好，涵盖最新作品及经典内容，致力于为用户提供优质的国产影视观看体验。</p>
+        </section>
+        <section>
+            <h2>快速导航</h2>
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./categories.html">分类浏览</a></li>
+                <li><a href="./ranking.html">排行榜</a></li>
+                <li><a href="./search.html">搜索影片</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>热门分类</h2>
+            <ul><li><a href="./category-guochan-rebo.html">国产热播</a></li>
+<li><a href="./category-xuanyi-fanzui.html">悬疑犯罪</a></li>
+<li><a href="./category-dongzuo-maoxian.html">动作冒险</a></li>
+<li><a href="./category-aiqing-juqing.html">爱情剧情</a></li>
+<li><a href="./category-qihuan-kehuan.html">奇幻科幻</a></li></ul>
+        </section>
+        <section>
+            <h2>观影提示</h2>
+            <p>详情页播放器支持高清播放，点击播放按钮即可开始观影。</p>
+            <p>移动端与桌面端均可浏览片库、搜索与筛选。</p>
+        </section>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 热播国产影视</span>
+        <span>高清片库 · 今日推荐 · 分类检索</span>
+    </div>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?95df08bc498ee0333203841fd6fee1eb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
